@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+.container-header{
+    font-size: 1px;
+}
 header {
     position: fixed;
     top: 0;
@@ -8,7 +11,7 @@ header {
     right: 0;
     background-color: #ecf0f1;
     transition: all 0.5s ease-in-out;
-    z-index: 999;
+    z-index: 10;
 }
 
 header.sticky {
@@ -40,7 +43,7 @@ header.sticky #main-menu li a span {
 }
 
 #main-menu {
-    display: -webkit-box;
+    display: flex;
     list-style: none;
     margin: 0px auto;
     padding: 0;
@@ -94,7 +97,7 @@ header.sticky #main-menu li a span {
     color: #bdc3c7;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1120px) {
     #main-menu {
         width: 100%;
         flex-direction: column;
@@ -105,8 +108,8 @@ header.sticky #main-menu li a span {
         display: block;
     }
 
-    .container,
-    .container a {
+    .container-header,
+    .container-header a {
         width: 100%;
         display: none;
     }
