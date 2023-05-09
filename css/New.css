@@ -6034,7 +6034,38 @@ blockquote {
     max-width: 100%!important;
     padding-left: 0!important;
     padding-right: 0!important;
-    width: 100%!important
+    width: 100%!important;
+    color: #333;
+    text-align: center;
+    position: relative;
+    transition: all .25s;
+}
+
+.expand span {
+    position: relative;
+    z-index: 2;
+}
+
+.expand:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius:5px;
+    background: rgb(247,150,192);
+    background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+    transition: all .3s;
+}
+
+.expand span:hover {
+    position: relative;
+    color: #fff;
+}
+
+.expand:hover:after {
+    width: 100%;
 }
 
 .pull-right {
@@ -10044,7 +10075,7 @@ li.wc-layered-nav-rating .star-rating {
     content: ""
 }
 .button.pale-yellow {
-    border: 1px #91ba9c solid !important;
+    border: 1px #333 solid !important;
     font-weight: 400;
     color: #000 !important;
 }
@@ -10241,6 +10272,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 .f_widget.about-widget .f_list li {
     margin-bottom: 15px;
+    list-style-type: none;
 }
 .f_widget.about-widget .f_list {
     margin-bottom: 0px;
